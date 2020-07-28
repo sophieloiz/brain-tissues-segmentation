@@ -14,6 +14,12 @@ import matplotlib.pyplot as plt
 def scaleImg(img, height, width):
     return cv2.resize(img, dsize=(width, height), interpolation=cv2.INTER_LINEAR)
 
+def normalizeImageIntensityRange(img, H_MIN, H_MAX):
+    H_RANGE = H_MAX - H_MIN
+    img[img < H_MIN] = H_MIN
+    img[img > H_MAX] = H_MAX
+    return (img - H_MIN)/H_RANGE
+
 def predictVolume(inImg, height, width, model, toBin=True, SLICE_X = True, SLICE_Y = True, SLICE_Z = False):
     
     (x, y, z) = inImg.shape
@@ -58,7 +64,7 @@ def saveImg(img, filename):
     return nib.Nifti1Image(img, np.eye(4)).to_filename(filename)
 
 def image2array(img_path, mask_path):
-    return nib.load(img_path).get_fdata(), nib.load(mask_path).get_fdata()
+    return normalizeImageIntensityRange(nib.load(img_path).get_fdata(), 0, 2000), nib.load(mask_path).get_fdata()
 
 def prediction(model, img_path, mask_path, slice_index):
     imgTarget, imgMask = image2array(img_path, mask_path)  
