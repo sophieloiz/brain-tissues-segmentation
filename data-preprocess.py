@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Éditeur de Spyder
+Created on Fri Jul 24 14:40:20 2020
 
-Ceci est un script temporaire.
+@author: Sophie
 """
 
 import os, glob
@@ -13,9 +13,9 @@ import cv2
 
 dataInputPath ='/Users/Sophie/Documents/data/sub-all/anat/'
 imagePathInput = os.path.join(dataInputPath, 'img/')
-maskPathInput = os.path.join(dataInputPath, 'mask2/')
+maskPathInput = os.path.join(dataInputPath, 'mask/')
 
-dataOutputPath = '/Users/Sophie/Documents/data/sub-light/slices/'
+dataOutputPath = '/Users/Sophie/Documents/data/sub-all/slices/'
 imageSliceOutput = os.path.join(dataOutputPath, 'img/')
 maskSliceOutput = os.path.join(dataOutputPath, 'mask/')
 
