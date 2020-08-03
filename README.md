@@ -93,6 +93,7 @@ Some example of the results of the network :
 * For the white matter segmentation : 
 
 * For the cerebrospinal fluid segmentation : 
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/first_result_2.png)
 
 
  ---- | Dice Score| IoU
