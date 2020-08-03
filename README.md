@@ -39,7 +39,11 @@ def Volume2Slices(vol, path, filename):
 
 The U-net is a convolutional network architecture used for fast and precise segmentation of images. This is a very popular architeture in bio medical images. 
 
-The architecture contains two paths: a contraction path (encoder) and an expanding path (decoder). The encoder is used to capture the context in the image whereas the decoder will enable precise localization. 
+The architecture contains two paths:
+* a contraction path => encoder
+* an expanding path => decoder
+ 
+ The **encoder** is used to capture the context in the image whereas the **decoder** will enable precise localization. 
 
 
 ![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/u-net-architecture.png)
