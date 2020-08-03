@@ -51,6 +51,8 @@ The architecture contains two paths:
 
 ![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/u-net-architecture.png)
 
+
+
 This is the code relative to this architecture: 
 
 ```javascript
