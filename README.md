@@ -101,3 +101,7 @@ Some example of the results of the network :
 WM | -------------| -------------
 GM |  -------------| -------------
 CSF |  -------------| -------------
+
+## Second Approach : Unet with pretrained Resnet34 encoder
+
+###
