@@ -12,7 +12,10 @@ This is an example of a single slice of the input image and the associated mask 
 
 ![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/preprocess.png)
 
+
 This function slices the whole volume images into different 2D slices :
+
+
 
 ```javascript
 def Volume2Slices(vol, path, filename):
@@ -48,6 +51,7 @@ The architecture contains two paths:
 
 ![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/u-net-architecture.png)
 
+This is the code relative to this architecture: 
 
 ```javascript
 def UNet(in_channels, out_channels, n_levels, initial_features, n_blocks, IMAGE_HEIGHT, IMAGE_WIDTH):
@@ -76,7 +80,14 @@ def UNet(in_channels, out_channels, n_levels, initial_features, n_blocks, IMAGE_
     
     return keras.Model(inputs=[inputs], outputs=[x], name=f'UNET-Level{n_levels}-Features{initial_features}')
 ```
+
+
 ### Results
+
+Some example of the results of the network : 
+
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_pve1.png)
+
 
  ---- | Dice Score| IoU
 ------------ | -------------| -------------
