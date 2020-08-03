@@ -1,13 +1,13 @@
 # Brain Tissues Segmentation
 
 ## Introduction 
-The purpose of this project is to develop deep learning approaches for the segmentation of brain tissues. These segmentations are useful for measuring and visualizing anatomical structures but also to analyze brain changes in case of disease like Alzheimer. Today different automatic segmentation exists like FAST (FSL), Freesurfer or ANTS. But these approaches are often inaccurate and require manual segmentation which is booth time consuming and challenging. 
+The purpose of this project is to develop deep learning approaches for the segmentation of brain tissues. These segmentations are useful for measuring and visualizing anatomical structures, but also to analyze brain changes in case of diseases like Alzheimer. Today different automatic segmentations are available thanks to FAST (FSL), Freesurfer and ANTS. But these approaches are often inaccurate and require additional manual segmentations which are both time consuming and challenging. 
 
 ## First Approach : UNet Implementation
 
 ### Preprocessing
 
-The first UNet implemented took 2D images as input. So, we needed to slice the 3D Volume images of our dataset.  
+The first UNet implemented took 2D images as input. So, we needed to slice the 3D volume images of our dataset.  
 This is an example of a single slice of the input image and the associated mask : 
 
 ![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/preprocess.png)
@@ -40,13 +40,13 @@ def Volume2Slices(vol, path, filename):
 ```
 ### Model 
 
-The U-net is a convolutional network architecture used for fast and precise segmentation of images. This is a very popular architeture in bio medical images. 
+The U-net is a convolutional network architecture used for fast and precise segmentation of images. This is a very popular architecture in biomedical images. 
 
 The architecture contains two paths:
 * a contraction path => encoder
 * an expanding path => decoder
  
- The **encoder** is used to capture the context in the image whereas the **decoder** will enable precise localization. 
+ The **encoder** is used to capture the context in the image, whereas the **decoder** will enable precise localization. 
 
 
 ![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/u-net-architecture.png)
@@ -81,6 +81,21 @@ def UNet(in_channels, out_channels, n_levels, initial_features, n_blocks, IMAGE_
     x = layers.Conv2D(out_channels, kernel_size=1, activation=activation, padding='same')(x)
     
     return keras.Model(inputs=[inputs], outputs=[x], name=f'UNET-Level{n_levels}-Features{initial_features}')
+```
+
+### Train 
+
+To train the model, **Adam** was used as an optimizer and **binary crossentropy** as loss function. 
+
+```javascript
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+model.fit_generator(generator=train_generator, 
+                    steps_per_epoch=epoch_step_train, 
+                    validation_data=test_generator, 
+                    validation_steps=epoch_step_test,
+                   epochs=epochs)
 ```
 
 
