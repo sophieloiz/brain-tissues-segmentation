@@ -10,7 +10,7 @@ The purpose of this project is to develop deep learning approaches for the segme
 The first UNet implemented took 2D images as input. So, we need to slice the 3D Volume images of our dataset.  
 This is an example of a single slice of the input image and the associated mask : 
 
-![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/preprocess.png)
+![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/preprocess.png)
 
 This function slices the whole volume images into different 2D slices :
 
@@ -36,6 +36,14 @@ def Volume2Slices(vol, path, filename):
     
 ```
 ### Model 
+
+The U-net is a convolutional network architecture used for fast and precise segmentation of images. This is a very popular architeture in bio medical images. 
+
+The architecture contains two paths: a contraction path (encoder) and an expanding path (decoder). The encoder is used to capture the context in the image whereas the decoder will enable precise localization. 
+
+
+![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/u-net-architecture.png)
+
 
 ```javascript
 def UNet(in_channels, out_channels, n_levels, initial_features, n_blocks, IMAGE_HEIGHT, IMAGE_WIDTH):
