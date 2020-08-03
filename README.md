@@ -101,7 +101,7 @@ Some examples of the results of the network :
  ---- | Dice Score| IoU
 ------------ | -------------| -------------
 WM | -------------| -------------
-GM |  -------------| -------------
+GM |  0.93218| 0.87599
 CSF |  -------------| -------------
 
 ## Second Approach : Unet with pretrained Resnet34 encoder
