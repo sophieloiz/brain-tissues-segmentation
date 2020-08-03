@@ -86,7 +86,7 @@ def UNet(in_channels, out_channels, n_levels, initial_features, n_blocks, IMAGE_
 
 ### Results
 
-Some example of the results of the network : 
+Some examples of the results of the network : 
 
 * For the gray matter segmentation : 
 
