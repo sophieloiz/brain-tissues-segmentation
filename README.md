@@ -86,7 +86,7 @@ def UNet(in_channels, out_channels, n_levels, initial_features, n_blocks, IMAGE_
 
 ### Train 
 
-To train the model, **Adam** was used as an optimizer and **binary crossentropy** as loss function. 
+To train the model, **Adam** was used as an optimizer and **binary crossentropy** as loss function.
 
 ```javascript
 
@@ -98,6 +98,12 @@ model.fit_generator(generator=train_generator,
                     validation_steps=epoch_step_test,
                    epochs=epochs)
 ```
+To evaluate the model we used two different metrics : 
+
+* The Intersection-Over-Union (IoU)
+* The Dice Coefficient (F1 Score)
+
+These metrics are the most common metrics for semantic segmentation. 
 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_loss_accuracy_pve1.png)
 
