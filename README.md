@@ -123,9 +123,9 @@ Some examples of the results of the network :
 
  ---- | Dice Score| IoU| Accuracy
 ------------ | -------------| -------------
-WM | -------------| -------------
+WM | -------------| -------------| -------------
 GM |  0.93218| 0.87599 | 0.9566
-CSF |  -------------| -------------
+CSF |  -------------| -------------| -------------
 
 ## Second Approach : Unet with pretrained Resnet34 encoder
 
