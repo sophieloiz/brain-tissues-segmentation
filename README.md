@@ -98,6 +98,7 @@ model.fit_generator(generator=train_generator,
                    epochs=epochs)
 ```
 
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_loss_accuracy_pve1.png)
 
 ### Results
 
