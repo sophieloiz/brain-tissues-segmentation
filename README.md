@@ -121,10 +121,10 @@ Some examples of the results of the network :
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/first_result_2.png)
 
 
- ---- | Dice Score| IoU
+ ---- | Dice Score| IoU| Accuracy
 ------------ | -------------| -------------
 WM | -------------| -------------
-GM |  0.93218| 0.87599
+GM |  0.93218| 0.87599 | 0.9566
 CSF |  -------------| -------------
 
 ## Second Approach : Unet with pretrained Resnet34 encoder
