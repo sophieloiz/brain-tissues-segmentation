@@ -9,9 +9,9 @@ The purpose of this project is to develop deep learning approaches for the segme
 
 The first UNet implemented took 2D images as input. So, we needed to slice the 3D volume images of our dataset.  
 
-This is an example of a single slice of the input image and the associated mask : 
+This is an example of a single slice of the input image and the associated masks : 
 
-![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/preprocess.png)
+![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/true_masks.png)
 
 
 This function slices the whole volume images into different 2D slices :
