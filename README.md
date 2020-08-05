@@ -150,5 +150,26 @@ The general architecture of the Unet with ResBlocks is detailled bellow:
 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/U-Resnet_architecture.png)
 
+To compare with the previous network, we have to implement the **ResBlock** function. It's composed of a **shortcut** which will connect the output of one layer with the input of an earlier layer. 
+
+``` python
+def ResBlock(x, nb_filters, strides):
+    res_path = BatchNormalization()(x)
+    res_path = Activation(activation='relu')(res_path)
+    res_path = Conv2D(filters=nb_filters[0], kernel_size=(3, 3), padding='same', strides=strides[0])(res_path)
+    res_path = BatchNormalization()(res_path)
+    res_path = Activation(activation='relu')(res_path)
+    res_path = Conv2D(filters=nb_filters[1], kernel_size=(3, 3), padding='same', strides=strides[1])(res_path)
+
+    shortcut = Conv2D(nb_filters[1], kernel_size=(1, 1), strides=strides[0])(x)
+    shortcut = BatchNormalization()(shortcut)
+
+    res_path = add([shortcut, res_path])
+    return res_path
+  ```  
+   
+### Results
+
+
 
 ###
