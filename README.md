@@ -128,7 +128,8 @@ Some examples of the results of the network :
 
 * For the white matter segmentation : 
 
-![] (https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_WM.png)
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_WM.png)
+
 * For the cerebrospinal fluid segmentation : 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/first_result_2.png)
 
