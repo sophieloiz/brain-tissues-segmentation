@@ -146,6 +146,7 @@ CSF |  -------------| -------------| -------------
 
 The idea of this architecture is to replace the convolutions in U-Net on each level with ResBlock in order to improve the performance of our previous model. 
 
+
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/U-Resnet_architecture.png)
 
 
