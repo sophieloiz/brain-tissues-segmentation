@@ -98,12 +98,23 @@ model.fit_generator(generator=train_generator,
                     validation_steps=epoch_step_test,
                    epochs=epochs)
 ```
-To evaluate the model we used two different metrics : 
+To evaluate the model we used two of the most common metrics for semantic segmentation : 
 
 * The Intersection-Over-Union (IoU)
 * The Dice Coefficient (F1 Score)
 
-These metrics are the most common metrics for semantic segmentation. 
+In order to evaluate the **F1 Score**, a function was created : 
+
+```javascript
+def get_f1(y_true, y_pred): 
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
+    predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
+    precision = true_positives / (predicted_positives + K.epsilon())
+    recall = true_positives / (possible_positives + K.epsilon())
+    f1_val = 2*(precision*recall)/(precision+recall+K.epsilon())
+    return f1_val
+```
 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_loss_accuracy_pve1.png)
 
