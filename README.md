@@ -140,6 +140,13 @@ WM | -------------| -------------| -------------
 GM |  0.93218| 0.87599 | 0.9566
 CSF |  -------------| -------------| -------------
 
-## Second Approach : Unet with pretrained Resnet34 encoder
+## Second Approach : Unet with ResBlock
+
+### Architecture
+
+The idea of this architecture is to replace the convolutions in U-Net on each level with ResBlock in order to improve the performance of our previous model. 
+
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/U-Resnet_architecture.png)
+
 
 ###
