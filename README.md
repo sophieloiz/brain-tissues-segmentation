@@ -127,7 +127,7 @@ Some examples of the results of the network :
 
 Let's focus on one 2D-Slice : 
 
-![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_unet-.png)
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_unet%20-.png)
 
 
 For this example the dice score and the IoU were calculated for each tissue : 
