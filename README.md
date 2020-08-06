@@ -125,6 +125,13 @@ Some examples of the results of the network :
 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_unet.png)
 
+For this example the dice score and the IoU were calculated for each tissue : 
+
+---| Dice Score| IoU 
+--- | --- | ---
+WM | 0.846060| 0.733194 
+GM | 0.947726| 0.900646 
+CSF | 0.84289| 0.728459 
 
 
 ## Second Approach : Unet with ResBlocks
