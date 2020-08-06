@@ -123,7 +123,7 @@ def get_f1(y_true, y_pred):
 
 Some examples of the results of the network : 
 
-![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_UNet.png)
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_unet.png)
 
 
 
