@@ -145,7 +145,7 @@ CSF | 0.84289| 0.728459
 
 The idea of this architecture is to replace the convolutions in U-Net on each level with ResBlocks in order to improve the performance of our previous model. The residual blocks with skip connections helped in making a deeper and deeper convolution neural network.
 
-The general architecture of the Unet with ResBlocks is detailled bellow: 
+The general architecture of the Unet with ResBlocks is detailled below: 
 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/U-Resnet_architecture.png)
 
