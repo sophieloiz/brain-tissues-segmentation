@@ -123,7 +123,11 @@ def get_f1(y_true, y_pred):
 
 Some examples of the results of the network : 
 
-![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_unet.png)
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results.png)
+
+Let's focus on one 2D-Slice : 
+
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/results_unet_.png)
 
 For this example the dice score and the IoU were calculated for each tissue : 
 
