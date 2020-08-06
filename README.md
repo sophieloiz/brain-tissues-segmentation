@@ -171,6 +171,9 @@ def ResBlock(x, nb_filters, strides):
    
 ### Results
 
+## Third Approach : Unet with a pretrained ResNet encoder
+
+
 ## Sources 
 *U-Net: Convolutional Networks for Biomedical Image Segmentation, Olaf Ronneberger, Philipp Fischer, Thomas Brox https://arxiv.org/abs/1505.04597
 ###
