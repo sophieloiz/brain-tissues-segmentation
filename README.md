@@ -43,6 +43,14 @@ def Volume2Slices(vol, path, filename):
     return cpt
     
 ```
+
+An other important step was to normalize each slice of the MRI in order to make the network works for every MRI. 
+
+Here is an example of two histograms of a slice. On the left we can observe the histogram before normalization and on the right the result after normalization. 
+
+![Image Mask](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/histo.png)
+
+Thus, every pixel has a value between 0 and 1.
 ### Model 
 
 The U-net is a convolutional network architecture used for fast and precise segmentation of images. This is a very popular architecture in biomedical images. 
