@@ -1,6 +1,6 @@
 # 2D Patches Segmentation
 
-Neuroscientists who want to work on non-human MRI can't use standard segmentation tools like **FAST FSL**. This is why the idea was instead of training the network on complete slices, to train the network on pieces of the image so that we can use it for non-human data.  
+Neuroscientists who want to work on non-human MRI can't use standard segmentation tools like **FAST FSL** to segmentate brain tissues like white and grey matter. In order to avoid manual Segmentation which is booth challenging and time consuming, we try to developp a deep learning approach by using small patches. The idea was instead of training the network on complete slices, to train the network on pieces of the image so that we can use it for non-human data.  
 
 ## Preprocessing 
 
