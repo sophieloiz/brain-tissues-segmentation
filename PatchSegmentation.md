@@ -31,7 +31,7 @@ def zoomin(image, mask, img_tab, mask_tab):
 ```
 Some examples of the use of this function :
 
-
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/zoomin.png)
 
 ## Training
 
