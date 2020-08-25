@@ -33,6 +33,8 @@ Some examples of the use of this function :
 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/zoomin.png)
 
+This data augmentation will improve the model ability to predict the segmentation on "weird" MRI, where the size of the folds is not the same as in humans.
+By zooming into the center of the patch, we try to generalize the network.
 ## Training
 
 To train the model, **Adam** was used as an optimizer and **binary crossentropy** as loss function.
