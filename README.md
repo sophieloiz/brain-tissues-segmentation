@@ -214,6 +214,12 @@ WM | 0.9717| -
 GM | 0.9731| - 
 CSF | 0.9717| -
 
+Let's have a look at the segmentation of the reconstructed mask : 
+
+![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/2Dpatchreconstructed_x.png)
+
+The dice score is 0.9402 and the IoU is 0.8871
+
 ## Third Approach : 2D Patches Segmentation with a ResUNet Architecture
 
 ### Architecture
@@ -247,6 +253,9 @@ def ResBlock(x, nb_filters, strides):
 Some examples of the results of the network : 
 
 ![](https://github.com/sophieloiz/brain-tissues-segmentation/blob/master/img/RESUNET_RES.PNG)
+
+Here we had a dice score of 0.9476 and a IoU of ....
+Thus, the results are better with this kind of architecture. 
 
 Let's focus on one 2D-Patch :
 
