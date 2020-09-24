@@ -484,11 +484,11 @@ class Predict(object):
         outImg2[outImg2<=0.5] = 0.0
         
 
-        nib.Nifti1Image(outImg, np.eye(4)).to_filename(self.config.targetOutput + 'pred_001_brain_pve_0.nii')
+        nib.Nifti1Image(outImg, imgTargetNii.affine).to_filename(self.config.targetOutput + 'pred_001_brain_pve_0.nii')
            
-        nib.Nifti1Image(outImg1, np.eye(4)).to_filename(self.config.targetOutput + 'pred_001_brain_pve_1.nii')
+        nib.Nifti1Image(outImg1, imgTargetNii.affine).to_filename(self.config.targetOutput + 'pred_001_brain_pve_1.nii')
         
-        nib.Nifti1Image(outImg2, np.eye(4)).to_filename(self.config.targetOutput + 'pred_001_brain_pve_2.nii')
+        nib.Nifti1Image(outImg2, imgTargetNii.affine).to_filename(self.config.targetOutput + 'pred_001_brain_pve_2.nii')
         
         return outImg, outImg1, outImg2
 
