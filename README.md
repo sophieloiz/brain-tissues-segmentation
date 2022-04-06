@@ -5,7 +5,7 @@ The purpose of this project is to develop deep learning approaches for the segme
 
 ## Dataset
 
-For this project, we used more than 1000 MRIs from a public dataset : the Autism Brain Imaging Data Exchange (ABIDE), which is composed of functional and structural brain imaging data collected from laboratories around the world. This dataset was created to accelerate the understanding of the neural bases of autism. It provides us for each subject : the original MRI, the brain extracted from the skull and the segmentation into 3 tissues (white matter, gray matter and core white matter). 
+For this project, we used more than 1000 MRIs from a public dataset : [the Autism Brain Imaging Data Exchange (ABIDE)](http://preprocessed-connectomes-project.org/abide/download.html), which is composed of functional and structural brain imaging data collected from laboratories around the world. This dataset was created to accelerate the understanding of the neural bases of autism. It provides us for each subject : the original MRI, the brain extracted from the skull and the segmentation into 3 tissues (white matter, gray matter and core white matter). 
 
 ## First Approach : UNet Implementation
 
